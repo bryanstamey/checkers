@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F315FC91C1D29BB004F2CCB /* playerMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F315FC71C1D29BB004F2CCB /* playerMovement.cpp */; };
 		9F66C3131C1CCB1A001D237C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F66C3121C1CCB1A001D237C /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F315FC71C1D29BB004F2CCB /* playerMovement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = playerMovement.cpp; sourceTree = "<group>"; };
+		9F315FC81C1D29BB004F2CCB /* playerMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerMovement.h; sourceTree = "<group>"; };
 		9F66C30F1C1CCB1A001D237C /* Checkers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Checkers; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F66C3121C1CCB1A001D237C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				9F66C3121C1CCB1A001D237C /* main.cpp */,
+				9F315FC71C1D29BB004F2CCB /* playerMovement.cpp */,
+				9F315FC81C1D29BB004F2CCB /* playerMovement.h */,
 			);
 			path = Checkers;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F66C3131C1CCB1A001D237C /* main.cpp in Sources */,
+				9F315FC91C1D29BB004F2CCB /* playerMovement.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +211,7 @@
 		9F66C3171C1CCB1A001D237C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +219,7 @@
 		9F66C3181C1CCB1A001D237C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,6 +243,7 @@
 				9F66C3181C1CCB1A001D237C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
