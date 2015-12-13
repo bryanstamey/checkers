@@ -1,38 +1,37 @@
 //
-//  playerMovement.cpp
+//  ai.cpp
 //  Checkers
 //
 //  Created by Bryan Stamey on 12/12/15.
 //  Copyright (c) 2015 Bryan Stamey. All rights reserved.
 //
 
+#include "ai.h"
+#include <cstdlib>
 #include "playerMovement.h"
-#include <iostream>
-#include <string>
 
-#define H 8
-#define W 8
-
-//TODO add for black (AI) king
-//Fills in the board with game pieces
-std::string Gameplay::color(int i) {
-    if(i == 0) return " ";        //blank space
-    else if(i == 1) return "O";   //open space
-    else if(i == 2) return "R";   //black
-    else if(i == 3) return "B";   //red
-    else if(i == 4) return "K";   //black king
-    else throw "err: tile not decleared";
+int AI::aiMoveW() {
+    int w = rand() % 8 + 1;
+    return w;
 }
 
-//Executes a basic move
-void Gameplay::movePiece(int i[H][W], int w, int x, int y, int z) {
-    int oldSpace = i[w][x];
-    i[w][x] = i[y][z];
-    i[y][z] = oldSpace;
+int AI::aiMoveX() {
+    int x = rand() % 8 + 1;
+    return x;
 }
 
-//Executes jump move
-void Gameplay::jump(int i[H][W], int w, int x, int y, int z) {
+int AI::aiSetY() {
+    int y = rand() % 8 + 1;
+    return y;
+}
+
+int AI::aiSetZ() {
+    int z = rand() % 8 + 1;
+    return z;
+}
+
+//Use these to verify and pass number
+int verify(int w, int x, int y, int z){
     int test1, test2;
     if(w < y)
         test1 = w + 1;
@@ -47,21 +46,6 @@ void Gameplay::jump(int i[H][W], int w, int x, int y, int z) {
     i[test1][test2] = 1;
     i[w][x] = 4;
     movePiece(i, w, x, y, z);
-}
-
-//Prints board and fills in with game pieces
-void Gameplay::printBoard(int i[H][W]) {
-    std::cout << "  +---+---+---+---+---+---+---+---+";
-    for(int a=0; a<H; a++) {
-        std::cout <<std::endl << a+1 << " |";
-        for(int b=0; b<W; b++) {
-            try {
-                std::cout << " " << color(i[a][b]) << " |"; }
-            catch (const char *e) { std::cout << e <<std::endl; }
-        }
-        std::cout << std::endl << "  +---+---+---+---+---+---+---+---+";
-    }
-    std::cout << std::endl << "    1   2   3   4   5   6   7   8" << std::endl;
 }
 
 void Gameplay::userTurn(int i[H][W], int w, int x, int y, int z) {

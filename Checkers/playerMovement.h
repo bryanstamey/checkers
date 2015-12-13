@@ -17,10 +17,13 @@
 #include <string>
 
 
-std::string color(int i);
-void movePiece(int i[H][W], int w, int x, int y, int z);
-void jump(int i[H][W], int w, int x, int y, int z);
-void printBoard(int i[H][W]);
-void userTurn(int i[H][W], int w, int x, int y, int z);
+class Gameplay {
+    public:
+        std::string color(int i);
+        void movePiece(int i[H][W], int w, int x, int y, int z);
+        void jump(int i[H][W], int w, int x, int y, int z);
+        void printBoard(int i[H][W]);
+        void userTurn(int i[H][W], int w, int x, int y, int z);
+};
 
 #endif /* defined(__Checkers__playerMovement__) */

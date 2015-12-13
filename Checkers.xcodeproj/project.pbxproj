@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F315FC91C1D29BB004F2CCB /* playerMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F315FC71C1D29BB004F2CCB /* playerMovement.cpp */; };
+		9F315FCC1C1D3161004F2CCB /* isWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F315FCA1C1D3161004F2CCB /* isWin.cpp */; };
+		9F315FCF1C1D39CC004F2CCB /* ai.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F315FCD1C1D39CC004F2CCB /* ai.cpp */; };
 		9F66C3131C1CCB1A001D237C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F66C3121C1CCB1A001D237C /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,10 @@
 /* Begin PBXFileReference section */
 		9F315FC71C1D29BB004F2CCB /* playerMovement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = playerMovement.cpp; sourceTree = "<group>"; };
 		9F315FC81C1D29BB004F2CCB /* playerMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerMovement.h; sourceTree = "<group>"; };
+		9F315FCA1C1D3161004F2CCB /* isWin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = isWin.cpp; sourceTree = "<group>"; };
+		9F315FCB1C1D3161004F2CCB /* isWin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isWin.h; sourceTree = "<group>"; };
+		9F315FCD1C1D39CC004F2CCB /* ai.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ai.cpp; path = ../ai.cpp; sourceTree = "<group>"; };
+		9F315FCE1C1D39CC004F2CCB /* ai.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ai.h; path = ../ai.h; sourceTree = "<group>"; };
 		9F66C30F1C1CCB1A001D237C /* Checkers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Checkers; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F66C3121C1CCB1A001D237C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,9 +66,13 @@
 		9F66C3111C1CCB1A001D237C /* Checkers */ = {
 			isa = PBXGroup;
 			children = (
+				9F315FCE1C1D39CC004F2CCB /* ai.h */,
+				9F315FCD1C1D39CC004F2CCB /* ai.cpp */,
 				9F66C3121C1CCB1A001D237C /* main.cpp */,
-				9F315FC71C1D29BB004F2CCB /* playerMovement.cpp */,
+				9F315FCB1C1D3161004F2CCB /* isWin.h */,
+				9F315FCA1C1D3161004F2CCB /* isWin.cpp */,
 				9F315FC81C1D29BB004F2CCB /* playerMovement.h */,
+				9F315FC71C1D29BB004F2CCB /* playerMovement.cpp */,
 			);
 			path = Checkers;
 			sourceTree = "<group>";
@@ -123,6 +133,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F315FCC1C1D3161004F2CCB /* isWin.cpp in Sources */,
+				9F315FCF1C1D39CC004F2CCB /* ai.cpp in Sources */,
 				9F66C3131C1CCB1A001D237C /* main.cpp in Sources */,
 				9F315FC91C1D29BB004F2CCB /* playerMovement.cpp in Sources */,
 			);
